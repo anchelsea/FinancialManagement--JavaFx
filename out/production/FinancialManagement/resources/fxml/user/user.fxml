@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="482.0" prefWidth="593.0" styleClass="root__content" stylesheets="@../../css/content.css" HBox.hgrow="ALWAYS"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Modules.User.UserPresenter">
+    <HBox styleClass="header">
+        <BorderPane HBox.hgrow="ALWAYS">
+            <left>
+                <fx:include fx:id="dropdownWallets" source="../button/wallet_dropdown.fxml" />
+            </left>
+        </BorderPane>
+    </HBox>
+
+    <VBox alignment="TOP_CENTER" minWidth="570.0" prefHeight="381.0" prefWidth="570.0" styleClass="container">
+        <VBox prefHeight="358.0" prefWidth="587.0" styleClass="container__content, user__content">
+            <VBox styleClass="user__group">
+                <Text>Name</Text>
+                <TextField fx:id="textFieldName" promptText="Name" disable="true" styleClass="transaction__create-form__select" />
+            </VBox>
+
+            <VBox styleClass="user__group">
+                <Text>Email</Text>
+                <TextField fx:id="textFieldEmail" disable="true" promptText="Email" styleClass="transaction__create-form__select" />
+            </VBox>
+
+
+            <VBox styleClass="user__group">
+                <Text>Password</Text>
+                <PasswordField fx:id="textFieldPassword" promptText="Password" styleClass="transaction__create-form__select" />
+            </VBox>
+
+            <VBox styleClass="user__group">
+                <Text>Password Confirmation</Text>
+                <PasswordField fx:id="textFieldPasswordConfirmation" promptText="Password Confirmation" styleClass="transaction__create-form__select" />
+            </VBox>
+
+            <VBox alignment="CENTER_RIGHT">
+                <fx:include onAction="#updateUser" source="../button/normal_btn.fxml">
+                    <text>Change Password</text>
+                </fx:include>
+            </VBox>
+        </VBox>
+      <stylesheets>
+         <URL value="@../../css/Page/transaction.css" />
+         <URL value="@../../css/Page/user.css" />
+      </stylesheets>
+    </VBox>
+</VBox>

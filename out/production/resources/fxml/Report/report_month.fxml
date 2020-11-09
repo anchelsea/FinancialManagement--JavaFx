@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Label?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      stylesheets="
+ @../../resources/CSS/Page/transaction.css,
+  @../../resources/CSS/content.css,
+  @../../resources/CSS/Page/report.css"
+      styleClass="dialog-container"
+      alignment="TOP_CENTER">
+    <VBox styleClass="dialog__content, month-report-container" alignment="TOP_CENTER">
+        <Label styleClass="font--size-15, text-bold" text="Report"/>
+        <BarChart fx:id="dateRangeChart" legendVisible="false">
+            <xAxis>
+                <CategoryAxis side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT"/>
+            </yAxis>
+        </BarChart>
+        <VBox styleClass="transactions__times">
+            <ListView fx:id="listViewMonthTransactions"/>
+        </VBox>
+    </VBox>
+</VBox>

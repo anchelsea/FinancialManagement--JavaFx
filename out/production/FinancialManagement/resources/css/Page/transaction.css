@@ -1,0 +1,84 @@
+.transaction__pane {
+    -fx-padding: 10px;
+}
+
+.transaction__statistic {
+    -fx-vgap: 5;
+    -fx-padding: 0 0 10px;
+}
+
+.transaction__statistic__remaining-amount {
+    -fx-border-width: 1 0 0 0;
+    -fx-border-color: rgba(0,0,0,.12);
+}
+
+.transactions__times {
+    -fx-spacing: 10;
+}
+
+/*.transactions__times .scroll-bar:vertical {*/
+/*-fx-scale-x: 0;*/
+/*}*/
+
+.transactions {
+    -fx-vgap: 8;
+    -fx-border-color: rgba(0,0,0,.12);
+    -fx-border-width: 0 0 5 0;
+    -fx-padding: 5 0 5 0;
+}
+
+.transaction__cell {
+    /*-fx-spacing: 5px;*/
+}
+
+.transaction__day {
+    -fx-padding: 0 0 5px;
+}
+
+.transaction__time__dd {
+    -fx-font-size: 10px;
+}
+
+.transaction__content {
+    -fx-spacing: 0;
+}
+
+.transaction__content__type.subcategory,
+.transaction__time__mmyyyy {
+    -fx-text-fill: rgba(0,0,0,.54);
+}
+
+.transaction__content__type.subcategory {
+    -fx-text-fill: rgba(0,0,0,.87);
+}
+
+.transaction__time__mmyyyy {
+    -fx-text-fill: #6f6f6f;
+}
+
+.transaction__content-container {
+    -fx-spacing: 5;
+}
+
+.transaction__cell > .transaction__time {
+    -fx-spacing: 0;
+    -fx-padding: 0 5px 0 0;
+}
+
+.transaction__content, .transaction__time {
+    -fx-spacing: 7;
+    -fx-padding: 0 5px;
+}
+
+.transaction__content__image {
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+}
+
+.transaction__options {
+    -fx-spacing: 8;
+}
+
+.transaction__amount {
+    -fx-spacing: 3;
+}

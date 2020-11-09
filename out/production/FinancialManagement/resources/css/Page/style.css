@@ -1,0 +1,42 @@
+#rootPane {
+    -fx-background-image: url("../../image/Other/background.jpg");
+    -fx-background-size: cover;
+
+}
+
+#loginBtn{
+    -fx-background-color: #ff6699;
+    -fx-background-radius: 50;
+}
+
+#loginBtn:hover {
+    -fx-background-color: #3b34c6;
+}
+
+
+
+#signUpBtn:hover {
+    -fx-background-color: #6bc6c6;
+}
+
+
+#signUpBtn1{
+    -fx-background-color: #ff6699;
+    -fx-background-radius: 50;
+}
+
+#loginBtn1:hover {
+    -fx-background-color: #6bc6c6;
+}
+
+
+
+#signUpBtn1:hover {
+    -fx-background-color: #2f28c7;
+}
+
+#warningIcon{
+    -fx-background-image: url("../../image/Other/warning.png");
+    -fx-background-size: cover;
+    -fx-background-position:center;
+}

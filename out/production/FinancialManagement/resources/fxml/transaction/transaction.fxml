@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox styleClass="root__content"  HBox.hgrow="ALWAYS"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Modules.Transaction.TransactionPresenter">
+    <HBox styleClass="header">
+        <BorderPane HBox.hgrow="ALWAYS">
+            <left>
+                <fx:include fx:id="dropdownWallets" source="../button/wallet_dropdown.fxml" />
+            </left>
+            <right>
+                <fx:include onAction="#createTransaction" source="../button/normal_btn.fxml">
+                    <text>ADD TRANSACTION</text>
+                </fx:include>
+            </right>
+        </BorderPane>
+    </HBox>
+
+    <VBox alignment="TOP_CENTER" styleClass="container" stylesheets="@../../css/Page/transaction.css" HBox.hgrow="ALWAYS">
+        <VBox maxWidth="560.0" prefHeight="570.0" prefWidth="50.0" styleClass="container__content">
+            <HBox alignment="TOP_CENTER" styleClass="tab-button-group">
+                <fx:include fx:id="leftTimeRange" onAction="#changeTime" source="../button/tab_btn.fxml" userData="-1">
+                    <text>LAST MONTH</text>
+                </fx:include>
+                <fx:include fx:id="middleTimeRange" onAction="#changeTime" source="../button/tab_btn.fxml" styleClass="active" userData="0">
+                    <text>THIS MONTH</text>
+                </fx:include>
+                <fx:include fx:id="rightTimeRange" onAction="#changeTime" source="../button/tab_btn.fxml" userData="1">
+                    <text>FUTURE</text>
+                </fx:include>
+            </HBox>
+
+            <VBox alignment="CENTER" styleClass="transaction__pane">
+                <GridPane styleClass="transaction__statistic">
+                    <Text text="Inflow" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <Label fx:id="labelInflow" styleClass="success-color" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    <Text text="Outflow" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <Label fx:id="labelOutflow" styleClass="danger-color" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <Text text="Total" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <Label fx:id="labelRemainingAmount" styleClass="transaction__statistic__remaining-amount" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" percentWidth="50" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" percentWidth="50" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+            <JFXListView fx:id="listViewTransactions" prefHeight="468.0" prefWidth="458.0" styleClass="transactions__times" />
+            </VBox>
+        </VBox>
+    </VBox>
+   <stylesheets>
+      <URL value="@../../css/content.css" />
+      <URL value="@../../css/optional_btn.css" />
+   </stylesheets>
+
+</VBox>

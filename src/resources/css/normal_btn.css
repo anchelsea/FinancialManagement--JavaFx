@@ -1,0 +1,146 @@
+.normal_btn {
+    -fx-font-weight: 500;
+    -fx-font-family: 'SansSerif';
+    -fx-background-color: #1aa333;
+    -fx-text-fill: #fff;
+    -fx-effect: dropshadow(three-pass-box, #000000, 1, 0, 0, 0);}
+/* Sidebar Button */
+.normal_btn:hover{
+    -fx-background-color: #03a9f4 light-blue;
+}
+
+.sidebar_btn {
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px;
+    -fx-background-position: center;
+    -fx-font-size: 11px;
+    -fx-text-alignment: center;
+    -fx-pref-height: 80px;
+    -fx-pref-width: 80px;
+}
+
+.sidebar_btn:hover{
+   -fx-background-color: #e0e0e0 #808080 lighten-2;
+}
+
+/* Tag Button */
+.tags__button {
+    -fx-background-color: transparent;
+    -fx-font-size: 14px;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: transparent;
+}
+
+.tags__button.active {
+    -fx-text-fill: #2db84c;
+    -fx-border-color: #2db84c;
+}
+
+.tags__button:hover{
+    -fx-background-color: #bbdefb blue lighten-4;
+}
+
+/*.sidebar_btn{*/
+/*    -fx-border-color: #3b45c6;*/
+/*}*/
+
+.text-button {
+    -fx-background-color: transparent;
+    -fx-font-size: 14px;
+}
+
+.sidebar_btn.active {
+    -fx-text-fill: #2db84c;
+}
+
+.expand {
+    -fx-pref-height: 45px;
+    -fx-background-image: url("../image/Other/expand.png");
+    -fx-background-position: center;
+
+}
+.expand.active{
+    -fx-border-color: #3c7fc6;
+}
+
+.wallet {
+    -fx-background-image: url("../image/Other/wallet.png");
+
+}
+
+.wallet.active {
+    -fx-background-image: url("../image/Other/coloured-wallet.png");
+}
+
+
+.report {
+    -fx-background-image: url("../image/Other/statistics.png");
+}
+
+.report.active {
+    -fx-background-image: url("../image/Other/coloured-statistics.png");
+}
+
+.budget {
+    -fx-background-image: url("../image/Other/budget.png");
+}
+
+
+.budget.active {
+    -fx-background-image: url("../image/Other/coloured-budget.png");
+}
+
+.transaction {
+    -fx-font-size: 10px;
+    -fx-background-image: url("../image/Other/transaction.png");
+}
+
+.transaction.active {
+    -fx-background-image: url("../image/Other/coloured-transaction.png");
+}
+
+.user {
+    -fx-background-image: url("../image/Other/user.png");
+}
+
+.user.active {
+    -fx-background-image: url("../image/Other/coloured-user.png");
+}
+
+
+
+.sign-out {
+    -fx-background-image: url("../image/Other/sign-out.png");
+}
+
+.sign-out.active {
+    -fx-background-image: url("../image/Other/coloured-sign-out.png");
+}
+
+.cancel-button {
+    -fx-background-color: rgba(0,0,0,.06);
+    -fx-text-fill: #1aa333;
+    -fx-effect: none;
+}
+.cancel-button:hover{
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+
+/* Image Button */
+.image-button {
+    -fx-background-color: #fff;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px;
+    -fx-background-position: 20px 45%;
+    -fx-padding: 12 10 12 55;
+    -fx-text-fill: #000;
+    -fx-max-width: infinity;
+    -fx-text-alignment: left;
+}
+
+.subcategories .image-button {
+    -fx-background-position: 45px 45%;
+    -fx-padding: 10 10 10 80;
+}

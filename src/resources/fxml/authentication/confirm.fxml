@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="460.0" prefWidth="764.0"
+             xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="249.0" layoutY="73.0" prefHeight="43.0" prefWidth="265.0" text="Confirm your email" textFill="#ff6699">
+            <font>
+                <Font size="31.0" />
+            </font></Label>
+        <Label fx:id="textLabel" layoutX="204.0" layoutY="135.0" prefHeight="94.0" prefWidth="400.0" text="We want to make sure It's really you. In order to verify your identity. Enter the vertification code that was sent to " textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <JFXTextField id="codeTextField" labelFloat="true" layoutX="238.0" layoutY="251.0" prefHeight="26.0" prefWidth="287.0" promptText="Vertification code" unFocusColor="#8c9a15" />
+        <JFXButton id="confirmBtn" layoutX="309.0" layoutY="326.0"  prefHeight="36.0" prefWidth="143.0" style="-fx-background-color: #f69;" text="CONFIRM" textFill="WHITE" />
+        <Label fx:id="resendLabel" layoutX="346.0" layoutY="384.0" prefHeight="18.0" prefWidth="70.0" text="Resend code" textFill="#004e9c" />
+        <Label fx:id="errorLabel" layoutX="268.0" layoutY="296.0" prefHeight="18.0" prefWidth="226.0" text="Your cofirm code was incorrect or expired" textFill="#9c001c" visible="false" />
+        <JFXProgressBar fx:id="progressBar" layoutX="224.0" layoutY="25.0" prefHeight="4.0" prefWidth="314.0" visible="false" />
+    </children>
+</AnchorPane>

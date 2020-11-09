@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+
+<JFXButton alignment="BOTTOM_CENTER" styleClass="normal_btn"
+           stylesheets="@../../css/normal_btn.css"  xmlns:fx="http://javafx.com/fxml/1" />

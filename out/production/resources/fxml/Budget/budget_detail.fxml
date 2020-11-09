@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      stylesheets="
+        @../../resources/CSS/Page/transaction.css,
+        @../../resources/CSS/content.css,
+        @../../resources/CSS/Page/report.css
+        "
+      styleClass="dialog-container"
+      alignment="TOP_CENTER">
+    <VBox alignment="TOP_CENTER">
+        <VBox styleClass="dialog__content, content--spacing-10"  alignment="TOP_CENTER">
+            <Text text="Transactions from 17/5/2020 to 27/5/2020" fx:id="textDialogTitle"
+                  styleClass="report__title, font--size-14, text-bold">
+                <VBox.margin>
+                    <Insets>
+                        <top>15</top>
+                    </Insets>
+                </VBox.margin>
+            </Text>
+            <ListView fx:id="listViewTransactions"/>
+        </VBox>
+    </VBox>
+</VBox>

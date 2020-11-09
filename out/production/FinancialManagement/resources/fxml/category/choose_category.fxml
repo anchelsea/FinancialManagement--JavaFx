@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox  xmlns:fx="http://javafx.com/fxml/1"
+      stylesheets=
+        "@../../css/content.css,
+        @../../css/icon.css,
+        @../../css/choose_category.css,
+        @../../css/Page/transaction.css">
+    <HBox fx:id="buttonGroupTabs" alignment="TOP_CENTER" styleClass="tab-button-group" />
+
+    <TabPane fx:id="tabPaneTypes" />
+
+    <VBox.margin>
+        <Insets>
+            <top>10</top>
+        </Insets>
+    </VBox.margin>
+
+</VBox>

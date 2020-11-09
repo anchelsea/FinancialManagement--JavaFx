@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="root__content" stylesheets="@../../css/content.css" HBox.hgrow="ALWAYS"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Modules.Wallet.WalletPresenter">
+    <HBox styleClass="header">
+        <BorderPane HBox.hgrow="ALWAYS">
+            <left>
+                <fx:include fx:id="dropdownWallets" source="../button/wallet_dropdown.fxml" />
+            </left>
+            <right>
+                <fx:include onAction="#createWallet" source="../button/normal_btn.fxml">
+                    <text>ADD WALLET</text>
+                </fx:include>
+            </right>
+        </BorderPane>
+    </HBox>
+
+    <VBox alignment="TOP_CENTER" styleClass="container" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+        <VBox styleClass="container__content, wallets__content">
+            <VBox styleClass="transactions__times">
+            <children>
+               <JFXListView fx:id="listViewWallets" prefHeight="510.0" prefWidth="550.0" styleClass="transactions" />
+            </children>
+            </VBox>
+        </VBox>
+      <stylesheets>
+         <URL value="@../../css/Page/transaction.css" />
+         <URL value="@../../css/Page/wallet.css" />
+      </stylesheets>
+    </VBox>
+</VBox>

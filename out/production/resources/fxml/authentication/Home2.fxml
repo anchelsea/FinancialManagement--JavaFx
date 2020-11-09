@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="root" prefHeight="700.0" prefWidth="500.0" style="-fx-background-color: #cfd8dc blue-grey lighten-4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Other.Old.HomeController">
+   <children>
+      <AnchorPane focusTraversable="true" prefHeight="70.0" prefWidth="500.0" style="-fx-background-color: #fafafa grey lighten-5;">
+         <children>
+            <Pane prefHeight="75.0" prefWidth="110.0">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Destop/HK2/CNPM/pic/wallet1.png" />
+                     </image></ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="74.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Destop/down_w.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children></AnchorPane>
+      <AnchorPane layoutX="-2.0" layoutY="634.0" prefHeight="70.0" prefWidth="500.0" style="-fx-background-color: #fafafa grey lighten-5;">
+         <children>
+            <Pane layoutY="7.0" prefHeight="70.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/Image/Other/transaction.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="45.0" prefHeight="25.0" prefWidth="80.0" text="Transactions" textAlignment="CENTER" />
+               </children>
+            </Pane>
+            <Pane layoutX="100.0" layoutY="11.0" prefHeight="70.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="40.0" layoutX="30.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/Image/report.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="44.0" prefHeight="25.0" prefWidth="80.0" text="Report" textAlignment="CENTER" />
+               </children>
+            </Pane>
+            <Pane layoutX="200.0" layoutY="11.0" prefHeight="70.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="62.0" fitWidth="61.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/Image/add_tran.png" />
+                     </image></ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="300.0" layoutY="11.0" prefHeight="70.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/Image/buget.png" />
+                     </image></ImageView>
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="44.0" prefHeight="25.0" prefWidth="80.0" text="Buget" textAlignment="CENTER" />
+               </children>
+            </Pane>
+            <Pane layoutX="400.0" layoutY="11.0" prefHeight="70.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/Image/Other/expand.png" />
+                     </image></ImageView>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="44.0" prefHeight="25.0" prefWidth="80.0" text="Expand" textAlignment="CENTER" />
+               </children>
+            </Pane>
+         </children></AnchorPane>
+      <AnchorPane layoutY="130.0" prefHeight="495.0" prefWidth="500.0" style="-fx-background-color: #e0e0e0 grey lighten-2;">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="510.0" prefWidth="500.0" style="-fx-background-color: #cfd8dc blue-grey lighten-4;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="498.0" />
+              </content>
+            </ScrollPane>
+         </children></AnchorPane>
+      <JFXTabPane layoutX="-1.0" layoutY="77.0" prefHeight="561.0" prefWidth="500.0" />
+   </children>
+</AnchorPane>

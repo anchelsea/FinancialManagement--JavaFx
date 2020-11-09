@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="rootPane"
+            prefHeight="547.0" prefWidth="789.0" stylesheets="@../../css/Page/style.css"  xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Pane layoutX="80.0" layoutY="110.0" prefHeight="423.0" prefWidth="639.0" style="-fx-background-color: #fff; -fx-background-radius: 30px;">
+            <children>
+                <Label layoutX="267.0" layoutY="14.0" prefHeight="45.0" prefWidth="104.0" text="Sign up" textAlignment="CENTER" textFill="#1d64b5">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Label>
+                <Label layoutX="224.0" layoutY="59.0" prefHeight="53.0" prefWidth="193.0" text="Hello there,start your app and manage your money now" textAlignment="CENTER" textFill="#28ad68" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                <JFXTextField fx:id="userNameTextField" focusColor="#992169" labelFloat="true" layoutX="209.0" layoutY="118.0" prefHeight="25.0" prefWidth="221.0" promptText="Username" />
+                <JFXPasswordField fx:id="passTextField" focusColor="#992169" labelFloat="true" layoutX="209.0" layoutY="212.0" prefHeight="25.0" prefWidth="221.0" promptText="Password" />
+                <JFXButton id="signUpBtn1" layoutX="239.0" layoutY="317.0" onAction="#handelClickedSignUpBtn" prefHeight="38.0" prefWidth="161.0" text="Sign up" textFill="WHITE" />
+                <JFXButton id="loginBtn1" layoutX="268.0" layoutY="371.0" onAction="#changeScene" prefHeight="38.0" prefWidth="104.0" style="-fx-border-color: #f69; -fx-background-radius: 50px; -fx-border-radius: 50px;" text="Login" />
+                <JFXTextField fx:id="emailTextField" focusColor="#992169" labelFloat="true" layoutX="209.0" layoutY="163.0" prefHeight="25.0" prefWidth="221.0" promptText="Email" />
+                <JFXPasswordField fx:id="confirmPassTextField" focusColor="#992169" labelFloat="true" layoutX="210.0" layoutY="262.0" prefHeight="25.0" prefWidth="221.0" promptText="Comfirm password" />
+                <Label id="warningIcon" fx:id="userWarnIcon" layoutX="439.0" layoutY="118.0" prefHeight="25.0" prefWidth="25.0" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+                <Label id="warningIcon" fx:id="emailWarnIcon" layoutX="438.0" layoutY="163.0" prefHeight="25.0" prefWidth="25.0" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+                <Label id="warningIcon" fx:id="passWarnIcon" layoutX="438.0" layoutY="212.0" prefHeight="25.0" prefWidth="25.0" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+                <Label id="warningIcon" fx:id="confirmWarnIcon" layoutX="439.0" layoutY="262.0" prefHeight="25.0" prefWidth="25.0" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+            </children>
+        </Pane>
+      <Label layoutX="319.0" layoutY="77.0" prefHeight="38.0" prefWidth="186.0" text="Financial Management" textFill="#4810c7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="89.0" fitWidth="113.0" layoutX="368.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/Other/login_picc.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

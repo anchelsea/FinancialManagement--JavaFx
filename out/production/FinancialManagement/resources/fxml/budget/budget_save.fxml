@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="215.0" prefWidth="666.0" styleClass="transaction__create-form"  xmlns:fx="http://javafx.com/fxml/1">
+
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+          <Text>Wallet *</Text>
+          <MenuButton fx:id="selectWallet" styleClass="transaction__create-form__select" />
+      </VBox>
+
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+          <Text>Category *</Text>
+          <Button fx:id="selectCategory" alignment="TOP_LEFT" onAction="#chooseCategory" styleClass="transaction__create-form__select, select-category, select-category--stylesheet" />
+      </VBox>
+
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+          <Text>Amount *</Text>
+          <TextField fx:id="textFieldBudgetAmount" onKeyTyped="#changeAmount" styleClass="transaction__create-form__select" />
+      </VBox>
+
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+          <Text>Start Date *</Text>
+         <JFXDatePicker fx:id="datePickerStartedAt" styleClass="date-picker-budget1" />
+      </VBox>
+
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+          <Text>End Date *</Text>
+         <JFXDatePicker fx:id="datePickerEndedAt" styleClass="date-picker-budgett1" />
+      </VBox>
+
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" styleClass="button-group" GridPane.columnIndex="2" GridPane.rowIndex="2">
+          <fx:include onAction="#closeScene" source="../button/normal_btn.fxml" styleClass="form__button, cancel-button">
+              <text>Cancel</text>
+          </fx:include>
+          <fx:include onAction="#saveBudget" source="../button/normal_btn.fxml" styleClass="form__button">
+              <text>Done</text>
+          </fx:include>
+      </HBox>
+   </children>
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+   <stylesheets>
+      <URL value="@../../css/transaction_create.css" />
+      <URL value="@../../css/content.css" />
+      <URL value="@../../css/icon.css" />
+   </stylesheets>
+</GridPane>

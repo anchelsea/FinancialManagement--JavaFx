@@ -1,0 +1,43 @@
+.transaction__create-form {
+    -fx-padding: 15;
+    -fx-vgap: 10;
+    -fx-hgap: 20;
+}
+
+.transaction__create-form__select {
+    -fx-background-color: #fff;
+    -fx-pref-width: infinity;
+    -fx-border-radius: 3;
+}
+
+.form__button {
+    -fx-font-size: 15px;
+    -fx-padding: 6px 10px;
+}
+
+.transaction__create-form > VBox {
+    -fx-spacing: 5;
+}
+
+.select-currency, .select-category {
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 12px 40%;
+}
+
+.select-currency {
+    -fx-background-size: 20px;
+}
+
+.select-currency--stylesheet {
+    -fx-padding: 7 5 7 37;
+    -fx-font-size: 11;
+}
+
+.select-category {
+    -fx-background-size: 26px;
+}
+
+.select-category--stylesheet {
+    -fx-padding: 7 5 7 42;
+    -fx-font-size: 11;
+}

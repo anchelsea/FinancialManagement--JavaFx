@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" styleClass="dialog-container"  xmlns:fx="http://javafx.com/fxml/1">
+    <VBox alignment="TOP_CENTER" styleClass="dialog__content">
+        <HBox alignment="CENTER" styleClass="budget-show__title">
+            <ImageView fx:id="imageBudgetCategory" fitHeight="50" fitWidth="50" styleClass="transaction__content__image" />
+            <VBox alignment="CENTER_LEFT">
+                <Label fx:id="labelBudgetCategoryName" styleClass="font--size-15, text-bold" />
+                <Label fx:id="labelBudgetDate" styleClass="font--size-12, text-bold, gray-color" />
+            </VBox>
+        </HBox>
+        <AreaChart fx:id="areaChartDetail" legendVisible="false">
+            <xAxis>
+                <CategoryAxis side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" />
+            </yAxis>
+        </AreaChart>
+
+        <VBox alignment="CENTER" styleClass="transaction__pane">
+            <GridPane styleClass="transaction__statistic, budget__statistic">
+                <VBox styleClass="transaction__time" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label styleClass="text-bold, font--size-12, gray-color" text="Amount" />
+                    <Label fx:id="labelBudgetAmount" styleClass="font--size-13" />
+                </VBox>
+                <VBox styleClass="transaction__time" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <Label styleClass="text-bold, font--size-12, gray-color" text="Spent" />
+                    <Label fx:id="labelBudgeSpentAmount" styleClass="font--size-13" />
+                </VBox>
+
+                <VBox styleClass="transaction__time" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <Label fx:id="labelBudgetStatus" styleClass="text-bold, font--size-12, gray-color" />
+                    <Label fx:id="labelBudgetRemainingAmount" styleClass="font--size-13" />
+                </VBox>
+
+                <VBox styleClass="transaction__time" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <Label styleClass="text-bold, font--size-12, gray-color" text="Should spend" />
+                    <Label fx:id="labelBudgetNormalDailyAmount" styleClass="font--size-13" />
+                </VBox>
+                <VBox styleClass="transaction__time" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <Label styleClass="text-bold, font--size-12, gray-color" text="Daily spending" />
+                    <Label fx:id="labelBudgetDailyAmount" styleClass="font--size-13" />
+                </VBox>
+
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS" percentWidth="50" />
+                    <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" percentWidth="50" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints vgrow="SOMETIMES" />
+                    <RowConstraints vgrow="SOMETIMES" />
+               <RowConstraints />
+                </rowConstraints>
+            </GridPane>
+        </VBox>
+
+        <fx:include onAction="#loadBudgetTransactions" source="../button/normal_btn.fxml">
+            <text>View Transactions</text>
+        </fx:include>
+    </VBox>
+   <stylesheets>
+      <URL value="@../../css/content.css" />
+      <URL value="@../../css/Page/transaction.css" />
+      <URL value="@../../css/Page/budget.css" />
+   </stylesheets>
+</VBox>

@@ -1,0 +1,73 @@
+.month-report-container {
+    -fx-max-width: 500px !important;
+}
+
+.report--padding-30 {
+    -fx-padding: 30px;
+}
+
+.report--background-white {
+    -fx-background-color: #fff;
+}
+
+.report__transactions--no-border {
+    -fx-border-width: 0 0 0 0;
+}
+
+.report__transactions {
+    -fx-padding: 15;
+}
+
+.transactions__times {
+    -fx-background-color: #fff;
+}
+
+.report__title {
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-padding: 15 0 0 0;
+}
+
+.report__view-button {
+
+}
+
+.report__date-range {
+    -fx-font-size: 10px;
+    -fx-background-color: transparent;
+    -fx-max-width: 85px;
+}
+
+.report__content > VBox, .report__content > HBox {
+    /*-fx-max-width: 380px;*/
+}
+
+.report__cell__icon {
+    -fx-padding: 0 5 0 12;
+}
+
+.chart, .chart-content {
+    -fx-padding: 10;
+}
+
+.chart-title {
+    -fx-font-size: 14px;
+}
+
+#incomeChart .chart-pie-label {
+    -fx-fill: #2db84c;
+}
+
+#incomeChart .chart-pie-label-line {
+    -fx-stroke: #2db84c;
+    -fx-fill: #2db84c;
+}
+
+#expenseChart .chart-pie-label {
+    -fx-fill: #f25a5a;
+}
+
+#expenseChart .chart-pie-label-line {
+    -fx-stroke: #f25a5a;
+    -fx-fill: #f25a5a;
+}

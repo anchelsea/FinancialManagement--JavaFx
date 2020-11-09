@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+
+<VBox stylesheets="@../resources/CSS/sidebar.css"
+      xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1"
+      fx:controller="com.MainPresenter"
+      styleClass="sidebar">
+
+    <fx:include fx:id="buttonExpand" onAction="#pressExpand" source="Button/sidebar_btn.fxml" styleClass="expand">
+
+    </fx:include>
+
+    <fx:include fx:id="buttonTransaction" onAction="#pressTransaction" source="Button/sidebar_btn.fxml" styleClass="transaction">
+        <VBox.margin>
+            <Insets>
+                <top>10</top>
+            </Insets>
+        </VBox.margin>
+
+        <text>Transactions</text>
+        <styleClass>wallet</styleClass>
+    </fx:include>
+
+
+    <fx:include fx:id="buttonReport" onAction="#pressReport" source="Button/sidebar_btn.fxml" styleClass="report">
+        <text>Reports</text>
+    </fx:include>
+
+    <fx:include fx:id="buttonBudget" onAction="#pressBudget" source="Button/sidebar_btn.fxml" styleClass="budget">
+        <text>Budgets</text>
+    </fx:include>
+
+    <fx:include fx:id="buttonWallet" onAction="#pressWallet" source="Button/sidebar_btn.fxml" styleClass="wallet">
+        <text>Wallets</text>
+    </fx:include>
+
+
+    <fx:include fx:id="buttonUser" onAction="#pressUser" source="Button/sidebar_btn.fxml" styleClass="user">
+        <text>User</text>
+    </fx:include>
+
+    <fx:include onAction="#pressSignOut" source="Button/sidebar_btn.fxml" styleClass="sign-out">
+        <text>Sign out</text>
+    </fx:include>
+</VBox>

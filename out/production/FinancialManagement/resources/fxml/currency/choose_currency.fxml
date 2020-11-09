@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="dialog-container, white-bg-color"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Modules.Currency.CurrencyPresenter">
+    <ListView fx:id="listViewCurrencies" />
+   <stylesheets>
+      <URL value="@../../css/choose_currency.css" />
+      <URL value="@../../css/icon.css" />
+      <URL value="@../../css/content.css" />
+   </stylesheets>
+</VBox>

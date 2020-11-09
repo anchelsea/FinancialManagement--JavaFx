@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="848.0" styleClass="root__content" stylesheets="@../../css/content.css" HBox.hgrow="ALWAYS"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Modules.Budget.BudgetPresenter">
+    <HBox styleClass="header">
+        <BorderPane HBox.hgrow="ALWAYS">
+            <left>
+                <fx:include fx:id="dropdownWallets" source="../button/wallet_dropdown.fxml" />
+            </left>
+            <right>
+                <fx:include onAction="#createBudget" source="../button/normal_btn.fxml">
+                    <text>ADD BUDGET</text>
+                </fx:include>
+            </right>
+        </BorderPane>
+    </HBox>
+
+    <VBox alignment="CENTER" styleClass="container">
+        <VBox styleClass="container__content">
+            <HBox alignment="TOP_CENTER" styleClass="tab-button-group--border">
+                <fx:include onAction="#changeTab" source="../button/tab_btn.fxml" styleClass="active" userData="0">
+                    <text>Running</text>
+                </fx:include>
+                <fx:include onAction="#changeTab" source="../button/tab_btn.fxml" userData="1">
+                    <text>Finished</text>
+                </fx:include>
+            </HBox>
+
+            <TabPane fx:id="budgetsTabPane">
+                <Tab>
+                    <ListView fx:id="listViewOngoingTab" prefHeight="800.0" styleClass="budget__tab" />
+                </Tab>
+                <Tab>
+                    <ListView fx:id="listViewFinishingTab" styleClass="budget__tab" />
+                </Tab>
+            </TabPane>
+        </VBox>
+      <stylesheets>
+         <URL value="@../../css/Page/transaction.css" />
+         <URL value="@../../css/Page/budget.css" />
+      </stylesheets>
+    </VBox>
+</VBox>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox minWidth="600.0" prefHeight="888.0" prefWidth="600.0" styleClass="root__content" stylesheets="@../../css/content.css" HBox.hgrow="ALWAYS"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Modules.Report.ReportPresenter">
+    <HBox styleClass="header" stylesheets="@../../css/Page/report.css">
+        <BorderPane HBox.hgrow="ALWAYS">
+            <left>
+                <fx:include fx:id="dropdownWallets" source="../button/wallet_dropdown.fxml" />
+            </left>
+            <center>
+                <HBox alignment="CENTER_RIGHT" styleClass="header__report">
+                    <Text styleClass="font--size-10">Range Date</Text>
+                    <DatePicker fx:id="datePickerStartDate" onMouseReleased="#changeDayRange" promptText="Start Date" styleClass="transaction__create-form__select, report__date-range" />
+                    <DatePicker fx:id="datePickerEndDate" onMouseReleased="#changeDayRange" promptText="End Date" styleClass="transaction__create-form__select, report__date-range" />
+                    <fx:include onAction="#changeDayRange" source="../button/normal_btn.fxml" styleClass="report__view-button">
+                        <text>View</text>
+                    </fx:include>
+                </HBox>
+            </center>
+        </BorderPane>
+    </HBox>
+
+    <VBox alignment="CENTER" styleClass="container" stylesheets="@../../css/Page/report.css">
+        <VBox alignment="TOP_CENTER" styleClass="container__content, report__content">
+            <VBox alignment="TOP_CENTER">
+                <BarChart fx:id="dateRangeChart" styleClass="chart" title="Net Income">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" />
+                    </yAxis>
+                </BarChart>
+                <fx:include onAction="#loadMonthTransactions" source="../button/normal_btn.fxml" styleClass="report__view-button">
+                    <text>View</text>
+                </fx:include>
+            </VBox>
+            <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                <PieChart fx:id="incomeChart" legendVisible="false" styleClass="chart" title="Inflow" />
+                <PieChart fx:id="expenseChart" legendVisible="false" styleClass="chart" title="Outflow" />
+            </HBox>
+        </VBox>
+    </VBox>
+</VBox>

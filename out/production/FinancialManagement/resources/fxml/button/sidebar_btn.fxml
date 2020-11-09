@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+
+
+<Button alignment="BOTTOM_CENTER"
+        styleClass="sidebar_btn" stylesheets="@../../css/normal_btn.css"  xmlns:fx="http://javafx.com/fxml/1">
+</Button>

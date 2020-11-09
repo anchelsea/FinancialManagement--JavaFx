@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Button?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
+
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      styleClass="transaction__cell">
+    <HBox styleClass="transaction__time" alignment="CENTER">
+        <Label text="27/07/2018" fx:id="labelTransactionTime"
+               styleClass="transaction__time__dd, gray-color"/>
+    </HBox>
+    <ImageView fitHeight="40"
+               fitWidth="40"
+               fx:id="imageTransactionCategory"
+               styleClass="transaction__content__image"/>
+    <VBox styleClass="transaction__content">
+        <Label text="Thursday" fx:id="labelTransactionCategoryName"
+               styleClass="transaction__content__type, text-bold, category"/>
+        <Label text="December 2018" fx:id="labelTransactionNote"
+               styleClass="gray-color"/>
+    </VBox>
+    <Pane HBox.hgrow="ALWAYS"></Pane>
+    <HBox alignment="CENTER_RIGHT" styleClass="transaction__amount">
+        <Label fx:id="labelAmount"/>
+        <Button fx:id="buttonOptions" onAction="#showPopup" styleClass="optional-button">
+            <graphic>
+                <FontAwesomeIconView glyphName="ELLIPSIS_V" size="12px" glyphStyle="-fx-fill: black" />
+            </graphic>
+        </Button>
+    </HBox>
+</HBox>

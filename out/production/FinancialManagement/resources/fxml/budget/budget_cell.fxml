@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Button?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ProgressBar?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml">
+    <HBox styleClass="budget__content">
+        <ImageView fitHeight="40"
+                   fitWidth="40"
+                   styleClass="transaction__content__image"
+                   fx:id="imageBudgetCategory"/>
+        <VBox HBox.hgrow="ALWAYS"
+              styleClass="transaction__content-container"
+              alignment="CENTER">
+            <HBox>
+                <VBox styleClass="transaction__content">
+                    <Label text="Thursday" fx:id="labelBudgetCategoryName"
+                           styleClass="transaction__content__type, text-bold, category"/>
+                    <Label text="15/05/2020 - 25/05/2020" fx:id="labelBudgetTime"
+                           styleClass="gray-color, font--size-12"/>
+                </VBox>
+                <Pane HBox.hgrow="ALWAYS"></Pane>
+                <HBox alignment="CENTER_RIGHT" styleClass="transaction__amount">
+                    <VBox styleClass="budget__amount, gray-color"
+                          alignment="CENTER_RIGHT">
+                        <Label styleClass="text-bold, font--size-13" fx:id="labelBudgetAmount"/>
+                        <Label styleClass="font--size-12" fx:id="labelBudgetRemainingAmount"/>
+                    </VBox>
+                    <Button styleClass="optional-button" onAction="#showPopup">
+                        <graphic>
+                            <FontAwesomeIconView glyphName="ELLIPSIS_V" size="12px" glyphStyle="-fx-fill: black" />
+                        </graphic>
+                    </Button>
+                </HBox>
+            </HBox>
+            <ProgressBar fx:id="progressBarRemainingAmount"/>
+            <Label text="26 days left" styleClass="font--size-12" fx:id="labelBudgetRemainingTime"/>
+        </VBox>
+    </HBox>
+</VBox>

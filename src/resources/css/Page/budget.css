@@ -1,0 +1,54 @@
+.budget__content {
+    -fx-padding: 5px 0;
+    -fx-spacing: 5;
+}
+
+.budget__tab .transactions {
+    -fx-border-width: 1 0 0;
+    -fx-border-color: #e0e0e0;
+}
+
+.budget__tab .budget__date-range {
+    -fx-padding: 8 5;
+    -fx-background-color: rgb(244, 244, 244);
+}
+
+.budget__amount {
+    -fx-spacing: 3;
+}
+
+.budget__options {
+    -fx-spacing: 5;
+}
+
+.budget__detail {
+    -fx-vgap: 5px;
+}
+
+.progress-bar {
+    -fx-pref-height: 8;
+    -fx-max-width: infinity;
+}
+
+.progress-bar .bar {
+    -fx-padding: 1px;
+    -fx-background-insets: 0;
+    -fx-background-color: linear-gradient(to left, #2db84c, #4af597);;
+}
+
+.progress-bar:indeterminate > .bar {
+    -fx-background-color: linear-gradient(to left, transparent, -fx-accent);
+}
+
+/* Budget Show */
+.budget-show__title {
+    -fx-spacing: 5;
+}
+
+.budget__statistic {
+    -fx-vgap: 5 !important;
+}
+
+.budget__statistic .transaction__time {
+    -fx-spacing: 0 !important;
+}
