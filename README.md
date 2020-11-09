@@ -1,5 +1,4 @@
 # FinancialManagement--JavaFx
-Đề tài: Phần mềm quản lý tài chính cá nhân.
 
 ### A few pics demo
 #### Login
